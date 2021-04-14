@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/corona-fe/static/css/main.4fa04ddb.chunk.css",
+    "main.js": "/corona-fe/static/js/main.a7234223.chunk.js",
+    "main.js.map": "/corona-fe/static/js/main.a7234223.chunk.js.map",
+    "runtime-main.js": "/corona-fe/static/js/runtime-main.0135b769.js",
+    "runtime-main.js.map": "/corona-fe/static/js/runtime-main.0135b769.js.map",
+    "static/js/2.41554807.chunk.js": "/corona-fe/static/js/2.41554807.chunk.js",
+    "static/js/2.41554807.chunk.js.map": "/corona-fe/static/js/2.41554807.chunk.js.map",
+    "index.html": "/corona-fe/index.html",
+    "static/css/main.4fa04ddb.chunk.css.map": "/corona-fe/static/css/main.4fa04ddb.chunk.css.map",
+    "static/js/2.41554807.chunk.js.LICENSE.txt": "/corona-fe/static/js/2.41554807.chunk.js.LICENSE.txt",
+    "static/media/avatar.45959bb1.jpg": "/corona-fe/static/media/avatar.45959bb1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0135b769.js",
+    "static/js/2.41554807.chunk.js",
+    "static/css/main.4fa04ddb.chunk.css",
+    "static/js/main.a7234223.chunk.js"
+  ]
+}
