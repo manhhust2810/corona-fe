@@ -1,0 +1,150 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    background-color: black;
+    padding: 10px;
+}
+
+
+.text {
+    color: white;
+    font-size: 23px;
+}
+
+.text2 {
+    color: white;
+    font-size: 10px;
+    font-weight: lighter;
+
+}
+
+.row-1-col-2{
+    background-color: #212121;
+    height: 480px;
+    max-height: 480px;
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.row-1{
+    background-color: #212121;
+    height: 90px;
+    border: 1px solid gray;
+    border-radius: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row-2{
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.col-style {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar{
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+}
+
+.buttonStyle {
+    background-color: tomato;
+    padding : 0 10px 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.buttonStyle:hover {
+    background-color: peru;
+    padding : 0 20px 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.buttonStyleFa {
+    background-color: royalblue;
+    padding : 0 10px 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.buttonStyleFa:hover {
+    background-color: slateblue;
+    padding : 0 20px 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.row-2-colum{
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.textTab{
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+    
+}
+
+.textTab:hover {
+    color: white;
+    border: none;
+}
+
+.flagStyle {
+    width: 32px;
+    height: 20px;
+}
+
+.searchbox {
+    background-color: white;
+    width: 320px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: start;
+    line-height: 36px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-transform: none;
+    color: red;
+    padding-left: 20px;
+}
+
+.row-1-col-2{
+    background-color: #212121;
+    height: 530px;
+    max-height: 530px;
+    border: 1px solid gray;
+    border-radius: 1px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+thead > tr > th {
+    border: 1px solid white;  
+    border-collapse: collapse; 
+}
+
+
