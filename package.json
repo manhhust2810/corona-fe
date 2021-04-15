@@ -1,7 +1,7 @@
 {
-  "homepage": "https://manhhust2810.github.io/corona-fe",
+  "homepage": "http://manhhust2810.github.io/corona-fe",
   "name": "corona-fe",
-  "author": "manhhust",
+  "author": "manhhust2810",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

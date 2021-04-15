@@ -342,7 +342,7 @@ function App() {
                             .reverse()
                             .map((element) => {
                               return (
-                                <tr>
+                                <tr key={element.country}>
                                   {" "}
                                   <td>
                                     {" "}

@@ -8,7 +8,7 @@ function Mapss(props) {
     "pk.eyJ1IjoiZGVubmEyNDcxOTk5IiwiYSI6ImNrNmNmd2x3ZDEzdm0zanJ5ZmxpY3dseDAifQ.4vQDLt0E5wV7RNE9IgSKBQ";
   const [viewport, setViewport] = useState({
     width: "100%",
-    height: 720,
+    height: 470,
     latitude: 10.823099,
     longitude: 106.629662,
     zoom: 2,
