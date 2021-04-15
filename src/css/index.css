@@ -124,8 +124,9 @@ body {
 
 .textTab{
     color: white;
-    font-size: 15px;
-    font-weight: lighter;
+    font-size: 12px;
+    /* font-weight: lighter; */
+    font-weight: bold;
 }
 
 .textTab:hover {

@@ -229,7 +229,7 @@ function App() {
                     variant={check === 1 ? "info" : "dark"}
                     className="textTab"
                     value={1}
-                    style={{ fontWeight: "bold" }}
+                    // style={{ fontWeight: "bold" }}
                   >
                     {" "}
                     <FaGlobeAsia /> Thế giới{" "}
@@ -238,7 +238,7 @@ function App() {
                     variant={check === 2 ? "info" : "dark"}
                     className="textTab"
                     value={2}
-                    style={{ fontWeight: "bold" }}
+                    // style={{ fontWeight: "bold" }}
                   >
                     {" "}
                     <img
