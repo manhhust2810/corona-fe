@@ -211,6 +211,7 @@ function App() {
       <Row style={{ marginTop: 10 }}>
         <Col className="row-1-col-2" md={3}>
           {" "}
+          <center>
           <table className="">
             {" "}
             <tr>
@@ -509,7 +510,9 @@ function App() {
                 )}{" "}
               </td>{" "}
             </tr>{" "}
-          </table>{" "}
+          </table>
+          </center>
+        {" "}
           <Container fluid={true}>
             {" "}
             <Row style={{ marginTop: 10 }}>
@@ -729,12 +732,11 @@ function App() {
               }}
             >
               {" "}
-              &copy; All rights reserved belong to &nbsp;{" "}
+              &copy; All rights reserved belong to &nbsp;
               <a href="https://github.com/manhhust/" className="text-light">
-                {" "}
-                manhhust{" "}
-              </a>{" "}
-              &nbsp;<span className="text-warning">{year}</span> . Please
+                manhhust
+              </a>
+              &nbsp;<span className="text-warning">{year}</span>. Please
               reference the Terms of Use and the Supplemental Terms for specific
               information related to your country. <br /> Your use of this
               website constitutes acceptance of the Terms of Use, Supplemental
