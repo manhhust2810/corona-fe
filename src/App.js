@@ -211,7 +211,7 @@ function App() {
       <Row style={{ marginTop: 10 }}>
         <Col className="row-1-col-2" md={3}>
           {" "}
-          <center>
+          
           <table className="">
             {" "}
             <tr>
@@ -226,17 +226,19 @@ function App() {
                 >
                   {" "}
                   <ToggleButton
-                    variant={check === 1 ? "light" : "dark"}
+                    variant={check === 1 ? "info" : "dark"}
                     className="textTab"
                     value={1}
+                    style={{ fontWeight: "bold" }}
                   >
                     {" "}
                     <FaGlobeAsia /> Thế giới{" "}
                   </ToggleButton>{" "}
                   <ToggleButton
-                    variant={check === 2 ? "light" : "dark"}
+                    variant={check === 2 ? "info" : "dark"}
                     className="textTab"
                     value={2}
+                    style={{ fontWeight: "bold" }}
                   >
                     {" "}
                     <img
@@ -511,7 +513,7 @@ function App() {
               </td>{" "}
             </tr>{" "}
           </table>
-          </center>
+          
         {" "}
           <Container fluid={true}>
             {" "}
@@ -553,46 +555,63 @@ function App() {
                 {" "}
                 <div className="col-style">
                   {" "}
-                  <div className="text2">
+                  <div className="text2" style={{ fontWeight: "bold" }}>
                     {" "}
                     <FaSyringe /> Tổng ca nhiễm{" "}
-                  </div>{" "}
+                  </div>
+                  {" "}
                   <div className="text" style={{ fontSize: 15 }}>
                     {" "}
-                    {total.sumCases}{" "}
-                  </div>{" "}
-                </div>{" "}
-              </Col>{" "}
+                    {total.sumCases}
+                    {" "}
+                  </div>
+                  {" "}
+                </div>
+                {" "}
+              </Col>
+              {" "}
               <Col md={4}>
                 {" "}
                 <div className="col-style">
                   {" "}
-                  <div className="text2">
+                  <div className="text2" style={{ fontWeight: "bold" }}>
                     {" "}
-                    <FaSkullCrossbones /> Tử vong{" "}
+                    <FaSkullCrossbones /> Tử vong
+                    {" "}
                   </div>{" "}
                   <div className="text" style={{ fontSize: 15 }}>
                     {" "}
-                    {total.sumDeaths}{" "}
-                  </div>{" "}
-                </div>{" "}
-              </Col>{" "}
+                    {total.sumDeaths}
+                    {" "}
+                  </div>
+                  {" "}
+                </div>
+                {" "}
+              </Col>
+              {" "}
               <Col md={4}>
                 {" "}
                 <div className="col-style">
                   {" "}
-                  <div className="text2">
+                  <div className="text2" style={{ fontWeight: "bold" }}>
                     {" "}
-                    <FaPlusSquare /> Hồi phục{" "}
-                  </div>{" "}
+                    <FaPlusSquare /> Hồi phục
+                    {" "}
+                  </div>
+                  {" "}
                   <div className="text" style={{ fontSize: 15 }}>
                     {" "}
-                    {total.sumRecovered}{" "}
-                  </div>{" "}
-                </div>{" "}
-              </Col>{" "}
+                    {total.sumRecovered}
+                    {" "}
+                  </div>
+                  {" "}
+                </div>
+                {" "}
+              </Col>
+              {" "}
             </Row>
-          )}{" "}
+          )}
+          {" "}
           <Row style={{ marginTop: 50 }}>
             {" "}
             <Col
@@ -633,7 +652,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 1000-1,000,000{" "}
+                Từ 1000 - 1,000,000{" "}
               </div>{" "}
             </Col>{" "}
             <Col
@@ -658,7 +677,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 100-1000{" "}
+                Từ 100 - 1000{" "}
               </div>{" "}
             </Col>{" "}
             <Col
@@ -683,7 +702,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 10-100{" "}
+                Từ 10 - 100{" "}
               </div>{" "}
             </Col>{" "}
             <Col
@@ -708,7 +727,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 1-10{" "}
+                Từ 1 - 10{" "}
               </div>{" "}
             </Col>{" "}
           </Row>{" "}
