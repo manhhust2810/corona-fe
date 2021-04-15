@@ -134,15 +134,15 @@ function App() {
                   <img
                     className="avatar"
                     src={avatar}
-                    width="50"
-                    height="66"
+                    width="45"
+                    height="61"
                     alt="avatar"
                   ></img>{" "}
                   <p className="text2">manhhust</p>{" "}
                 </div>
               </Col>{" "}
               <Col className="row-2" md={3}>
-                <p className="text">Coronavirus (2021 - nCoV)</p>{" "}
+                <h6 className="text">Coronavirus (2021 - nCoV)</h6>{" "}
               </Col>
               <Col className="row-2" md={3}>
                 <div
