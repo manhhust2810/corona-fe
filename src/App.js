@@ -1,18 +1,30 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./css/index.css";
 import {
+  // Container,
+  // Row,
+  // Col,
+  // Badge,
+  // Spinner,
+  ToggleButtonGroup,
+  ToggleButton,
+  Overlay,
+  // Tooltip,
+} from "react-bootstrap";
+// import logoSubee from "./../src/assets/image/icon.jpg";
+import avatar from "./assets/image/avatar.jpg";
+import { SiGmail } from "react-icons/si";
+import {
   Container,
   Row,
   Col,
   Badge,
   Spinner,
-  ToggleButtonGroup,
-  ToggleButton,
-  Overlay,
+  // ToggleButtonGroup,
+  // ToggleButton,
+  // Overlay,
   Tooltip,
-} from "react-bootstrap";
-// import logoSubee from "./../src/assets/image/icon.jpg";
-import avatar from "./assets/image/avatar.jpg";
+} from "reactstrap";
 import {
   FaBell,
   // FaFacebookSquare ,
@@ -24,7 +36,7 @@ import {
   FaPencilAlt,
   FaRegCalendarAlt,
   FaRegCopyright,
-  FaPhone,
+  // FaPhone,
   FaCode,
 } from "react-icons/fa";
 import Axios from "axios";
@@ -33,6 +45,8 @@ import TabMap from "./../src/component/TabMap";
 import moment from "moment";
 import VnIcon from "./../src/assets/image/vnicon.png";
 import data from "./api.json";
+import "./assets/css/sass/themes/gogo.light.purple.scss";
+// import "./assets/css/sass/_gogo.style.scss";
 
 function App() {
   const [total, setTotal] = useState({});
@@ -41,6 +55,9 @@ function App() {
   const [originData, setOriginData] = useState([]);
   const sortCases = (foo, baz) => foo.cases - baz.cases;
   const [list, setList] = useState([]);
+  const handleCancel = () => {
+    setOpenModal(false);
+  }
   const [currentUpdate, setCurrentUpdate] = useState(
     moment(new Date().toString())
   );
@@ -198,7 +215,7 @@ function App() {
                     </tr>{" "}
                     <tr className="text2">
                       {" "}
-                      <FaPhone /> Liên hệ :{" "}
+                      <SiGmail /> Liên hệ :{" "}
                       <a href="#" style={{color: "yellow"}}>manhktashust@gmail.com</a>{" "}
                     </tr>{" "}
                   </td>{" "}
@@ -384,7 +401,7 @@ function App() {
                                       }}
                                     >
                                       {" "}
-                                      <Badge variant="warning">
+                                      <Badge color="warning">
                                         {" "}
                                         {element.cases}{" "}
                                       </Badge>{" "}
@@ -401,7 +418,7 @@ function App() {
                                       }}
                                     >
                                       {" "}
-                                      <Badge variant="danger">
+                                      <Badge color="danger">
                                         {" "}
                                         {element.deaths}{" "}
                                       </Badge>{" "}
@@ -414,7 +431,7 @@ function App() {
                                       style={{ fontSize: "12px" }}
                                     >
                                       {" "}
-                                      <Badge variant="success">
+                                      <Badge color="success">
                                         {" "}
                                         {element.recovered}{" "}
                                       </Badge>{" "}
@@ -466,7 +483,7 @@ function App() {
                                       }}
                                     >
                                       {" "}
-                                      <Badge variant="warning">
+                                      <Badge color="warning">
                                         {" "}
                                         {element.cases}{" "}
                                       </Badge>{" "}
@@ -483,7 +500,7 @@ function App() {
                                       }}
                                     >
                                       {" "}
-                                      <Badge variant="danger">
+                                      <Badge color="danger">
                                         {" "}
                                         {element.deaths}{" "}
                                       </Badge>{" "}
@@ -496,7 +513,7 @@ function App() {
                                       style={{ fontSize: "15px" }}
                                     >
                                       {" "}
-                                      <Badge variant="success">
+                                      <Badge color="success">
                                         {" "}
                                         {element.recovered}{" "}
                                       </Badge>{" "}
@@ -733,7 +750,12 @@ function App() {
           </Row>{" "}
         </Col>{" "}
       </Row>{" "}
-      <ModalEmail show={openModal} onHide={() => setOpenModal(false)} />{" "}
+      <ModalEmail 
+      show={openModal} 
+      onHide={() => setOpenModal(false)} 
+      openModal={openModal}
+      handleCancel={handleCancel}
+      />{" "}
       <Row style={{ marginTop: 10 }}>
         {" "}
         <Col className="row-1" md={12}>
