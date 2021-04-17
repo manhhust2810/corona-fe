@@ -804,7 +804,7 @@ function App() {
             >
               {" "}
               &copy; All rights reserved belong to &nbsp;
-              <a href="https://github.com/manhhust/" className="text-light">
+              <a href="https://github.com/manhhust2810/" className="text-light">
                 manhhust
               </a>
               &nbsp;<span className="text-warning">{year}</span>. Please
