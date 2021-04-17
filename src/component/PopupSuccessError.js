@@ -5,6 +5,8 @@ import {
   MODAL_ERROR_INVALID,
   MODAL_SUCCESS,
 } from "../constants/PopupModalType";
+import { IoIosCheckmarkCircle } from "react-icons/io";
+import { MdMoodBad } from "react-icons/md";
 
 const PopupSuccessError = (props) => {
   const {
@@ -54,7 +56,7 @@ const successModal = (
       >
         Success
       </ModalHeader>
-      <ModalBody>{message}</ModalBody>
+      <ModalBody><IoIosCheckmarkCircle size={24} color="green"/>&nbsp;{message}</ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={toggle}>
           Close
@@ -85,7 +87,7 @@ const errorModal = (
       >
         Warning
       </ModalHeader>
-      <ModalBody>{message}</ModalBody>
+      <ModalBody><MdMoodBad size={24} color="#8C1515"/>&nbsp;{message}</ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={toggle}>
           Close

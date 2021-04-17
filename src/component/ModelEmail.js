@@ -42,14 +42,17 @@ function ModelEmail(props) {
       setModalOpen(true);
       setModalId("MODAL_ERROR_BLANK");
       setModalMessage("Email không được để trống.");
+      setEmail("");
     } else if (!regexEmail.test(email)) {
       setModalMessage("Email sai định dạng.");
       setModalId("MODAL_ERROR_INVALID");
       setModalOpen(true);
+      setEmail("");
     } else {
       setModalMessage("Đăng ký thành công");
       setModalId("MODAL_SUCCESS");
       setModalOpen(true);
+      setEmail("");
     }
   };
 
