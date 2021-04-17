@@ -23,6 +23,7 @@ import {
   // ToggleButtonGroup,
   // ToggleButton,
   // Overlay,
+  Input,
   Tooltip,
 } from "reactstrap";
 import {
@@ -159,7 +160,7 @@ function App() {
                 </div>
               </Col>{" "}
               <Col className="row-2" md={3}>
-                <h6 className="text">Coronavirus (2021 - nCoV)</h6>{" "}
+              <strong className="text" style={{color: "yellow"}}>Coronavirus (2021 - nCoV)</strong>
               </Col>
               <Col className="row-2" md={3}>
                 <div
@@ -276,11 +277,28 @@ function App() {
                   <FaGlobeAsia /> Thống kê ca nhiễm theo quốc gia{" "}
                 </div>{" "}
                 {check === 1 ? (
-                  <input
-                    className="searchbox"
+                  <center>
+                  <Input
+                    // className="searchbox"
                     placeholder="Search 667 regions ..."
                     onChange={handleSearchBox}
+                    style={{ 
+                      borderRadius: 20,
+                      width: 336,
+                      marginTop: 5,
+                      marginBottom: 10,
+                      textAlign: "start",
+                      height: 36,
+                      // lineHeight: 36,
+                      fontSize: 15,
+                      color: "white",
+                      border: "none",
+                      textTransform: "none",
+                      color: "red",
+                      paddingLeft: 20
+                    }}
                   />
+                  </center>   
                 ) : (
                   <span></span>
                 )}{" "}
@@ -671,7 +689,8 @@ function App() {
               {" "}
               <div
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
+                  zIndex: 10,
                   width: 100,
                   height: 100,
                   borderRadius: 50,
@@ -694,7 +713,7 @@ function App() {
               {" "}
               <div
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   marginLeft: 10,
                   marginTop: 10,
                   width: 80,
@@ -719,7 +738,7 @@ function App() {
               {" "}
               <div
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   marginLeft: 30,
                   marginTop: 10,
                   width: 40,
@@ -744,13 +763,13 @@ function App() {
               {" "}
               <div
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   marginLeft: 38,
                   marginTop: 10,
                   width: 20,
                   height: 20,
                   borderRadius: 10,
-                  opacity: 0.3,
+                  opacity: 0.3
                 }}
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>

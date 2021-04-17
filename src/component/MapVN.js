@@ -65,7 +65,7 @@ function MapVN(props) {
                   setShowPopup(!showPopup);
                 }}
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   width: 40,
                   height: 40,
                   borderRadius: 20,

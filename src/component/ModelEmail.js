@@ -2,12 +2,13 @@ import React, {
   // useEffect,
   useState,
 } from "react";
-import {
-  // Modal,
-  // Button,
-  Form,
-} from "react-bootstrap";
-import Axios from "axios";
+// import {
+//   // Modal,
+//   // Button,
+//   Form,
+// } from "react-bootstrap";
+// import Axios from "axios";
+import PopupSuccessError from "./PopupSuccessError";
 import ModalFooter from "reactstrap/es/ModalFooter";
 import {
   Button,
@@ -24,96 +25,116 @@ import {
 
 function ModelEmail(props) {
   const [email, setEmail] = useState("");
+  const [modalOpen, setModalOpen] = useState(true);
+  const [modalMessage, setModalMessage] = useState("");
+  // const [toggle, setToggle] = useState(true);
+  const [modalId, setModalId] = useState("");
 
-  const onSendMail = async () => {
-    let Check = await Axios.get(
-      `https://coronavirusupdatevn.herokuapp.com/api/public/sendEmail?email=${email}`
-    );
+  const handleType = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+  };
 
-    var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    // var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    // var re = new RegExp("^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$")
-
-    if (!email) {
-      alert("Email không được để trống.");
+  const handleSubmit = () => {
+    const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    props.handleCancel();
+    if (email === "") {
+      setModalOpen(true);
+      setModalId("MODAL_ERROR_BLANK");
+      setModalMessage("Email không được để trống.");
     } else if (!regexEmail.test(email)) {
-      alert("Email sai định dạng.");
+      setModalMessage("Email sai định dạng.");
+      setModalId("MODAL_ERROR_INVALID");
+      setModalOpen(true);
     } else {
-      if (Check.data.status === 200) {
-        alert("Đăng ký thành công");
-        props.onHide();
-      } else {
-        alert("Email này bạn đã đăng ký");
-      }
+      setModalMessage("Đăng ký thành công");
+      setModalId("MODAL_SUCCESS");
+      setModalOpen(true);
     }
   };
 
+  const handleOnClosePopupSuccessError = () => {};
+
+  const toggle = (modalId) => {
+    setModalId(modalId);
+    setModalOpen(!modalOpen);
+  };
+
+  // const onSendMail = async () => {
+  //   let Check = await Axios.get(
+  //     `https://coronavirusupdatevn.herokuapp.com/api/public/sendEmail?email=${email}`
+  //   );
+
+  //   var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  //   if (!email) {
+  //     setModalMessage("Email không được để trống.");
+  //     // alert("Email không được để trống.");
+  //   } else if (!regexEmail.test(email)) {
+  //     setModalMessage("Email sai định dạng.");
+  //     // alert("Email sai định dạng.");
+  //   } else {
+  //     if (Check.data.status === 200) {
+  //       // alert("Đăng ký thành công");
+  //       setModalMessage("Đăng ký thành công");
+  //       props.onHide();
+  //     } else {
+  //       setModalMessage("Email này bạn đã đăng ký");
+  //       // alert("Email này bạn đã đăng ký");
+  //     }
+  //   }
+  // };
+
   return (
-    <Modal
-      isOpen={props.openModal}
-      toggle={props.handleCancel}
-      id="reset-status-modal"
-    >
-      <ModalHeader toggle={props.handleCancel} className="modal-header">
-        <h6>Nhận thông báo mỗi khi cập nhật</h6>
-      </ModalHeader>
-      <ModalBody>
-        <Container>
-          <Row>
-            <Label for="tye" sm={4}>
-              Nhập email:<span className="text-danger">*</span>
-            </Label>
-            <Col sm={8} className="col-dropdown-item">
-              <Input type="email" required placeholder="Enter email ..." />
-            </Col>
-          </Row>
-        </Container>
-      </ModalBody>
-      <ModalFooter>
-        <Button
-          color="light"
-          className="custom-button-light"
-          onClick={props.handleCancel}
-        >
-          Cancel
-        </Button>
-        <Button
-          color="primary"
-          onClick={() => {
-            onSendMail();
-          }}
-        >
-          Send
-        </Button>
-      </ModalFooter>
-    </Modal>
-    //   {/* <Modal
-    //   {...props}
-    //   size="md"
-    //   aria-labelledby="contained-modal-title-vcenter"
-    //   centered
-
-    // >
-    //   <Modal.Header  style={{backgroundColor : '#212121'}} closeButton>
-    //     <Modal.Title id="contained-modal-title-vcenter" className='text'>
-    //       Nhận thông báo mới nhất mỗi khi cập nhật tin mới.
-    //     </Modal.Title>
-    //   </Modal.Header>
-    //   <Modal.Body  style={{backgroundColor : '#212121'}}>
-    //     <h4 className='text2' >Nhập email để được nhận thông báo nhanh nhất ^.^</h4>
-    //     <Form.Group controlId="formBasicEmail">
-
-    //       <Form.Control onChange={(e) => { setEmail(e.target.value)}} type="email" required placeholder="Enter email" />
-    //       <Form.Text className="text-muted">
-    //       </Form.Text>
-    //   </Form.Group>
-    //   </Modal.Body>
-    //   <Modal.Footer  style={{backgroundColor : '#212121'}}>
-    //     <Button onClick={() => {onSendMail()}}>Gửi Mail</Button>
-    //   </Modal.Footer>
-    // </Modal> */}
+    <Container>
+      <Modal
+        isOpen={props.openModal}
+        toggle={props.handleCancel}
+        id="reset-status-modal"
+      >
+        <ModalHeader toggle={props.handleCancel} className="modal-header">
+          <h6>Nhận thông báo mỗi khi cập nhật</h6>
+        </ModalHeader>
+        <ModalBody>
+          <Container>
+            <Row>
+              <Label for="tye" sm={4}>
+                Nhập email:<span className="text-danger">*</span>
+              </Label>
+              <Col sm={8} className="col-dropdown-item">
+                <Input
+                  type="email"
+                  required
+                  placeholder="Enter email ..."
+                  onChange={handleType}
+                />
+              </Col>
+            </Row>
+          </Container>
+        </ModalBody>
+        <ModalFooter>
+          <Button
+            color="light"
+            className="custom-button-light"
+            onClick={props.handleCancel}
+          >
+            Cancel
+          </Button>
+          <Button color="primary" onClick={handleSubmit}>
+            Send
+          </Button>
+        </ModalFooter>
+      </Modal>
+      <div className="popup">
+        <PopupSuccessError
+          modalId={modalId}
+          modal={modalOpen}
+          toggle={toggle}
+          handleOnClosePopupSuccessError={handleOnClosePopupSuccessError}
+          message={modalMessage}
+        />
+      </div>
+    </Container>
   );
 }
 

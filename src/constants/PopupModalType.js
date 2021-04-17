@@ -1,0 +1,7 @@
+export const MODAL = 'MODAL';
+
+export const MODAL_SUCCESS = 'MODAL_SUCCESS';
+
+export const MODAL_ERROR_INVALID = 'MODAL_ERROR_INVALID';
+
+export const MODAL_ERROR_BLANK = "MODAL_ERROR_BLANK";

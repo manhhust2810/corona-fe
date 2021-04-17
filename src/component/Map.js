@@ -68,11 +68,11 @@ function Mapss(props) {
                   setShowPopup(!showPopup);
                 }}
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   width: 200,
                   height: 200,
                   borderRadius: 100,
-                  opacity: 0.3,
+                  opacity: 0.3
                 }}
               ></div>
             </Marker>
@@ -103,11 +103,11 @@ function Mapss(props) {
                   setShowPopup(true);
                 }}
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   width: 100,
                   height: 100,
                   borderRadius: 50,
-                  opacity: 0.3,
+                  opacity: 0.3
                 }}
               ></div>
             </Marker>
@@ -138,7 +138,7 @@ function Mapss(props) {
                   setShowPopup(true);
                 }}
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   width: 50,
                   height: 50,
                   borderRadius: 25,
@@ -173,7 +173,7 @@ function Mapss(props) {
                   setShowPopup(true);
                 }}
                 style={{
-                  backgroundColor: "red",
+                  backgroundColor: "yellow",
                   width: 20,
                   height: 20,
                   borderRadius: 10,
