@@ -284,7 +284,7 @@ function App() {
                     onChange={handleSearchBox}
                     style={{ 
                       borderRadius: 20,
-                      width: 336,
+                      width: "100%",
                       marginTop: 5,
                       marginBottom: 10,
                       textAlign: "start",
