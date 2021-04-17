@@ -19,7 +19,7 @@ import {
   ModalBody,
   ModalHeader,
   Row,
-  Spinner,
+  // Spinner,
 } from "reactstrap";
 
 function ModelEmail(props) {
@@ -30,7 +30,7 @@ function ModelEmail(props) {
       `https://coronavirusupdatevn.herokuapp.com/api/public/sendEmail?email=${email}`
     );
 
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     // var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -38,7 +38,7 @@ function ModelEmail(props) {
 
     if (!email) {
       alert("Email không được để trống.");
-    } else if (!re.test(email)) {
+    } else if (!regexEmail.test(email)) {
       alert("Email sai định dạng.");
     } else {
       if (Check.data.status === 200) {

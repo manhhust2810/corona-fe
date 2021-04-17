@@ -392,51 +392,62 @@ function App() {
                                     </span>{" "}
                                   </td>{" "}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div
                                       className="text2"
                                       style={{
-                                        marginLeft: 10,
-                                        fontSize: "12px",
+                                        marginLeft: 5,
+                                        fontSize: "11px",
                                       }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       <Badge color="warning">
-                                        {" "}
-                                        {element.cases}{" "}
-                                      </Badge>{" "}
-                                    </div>{" "}
+                                        {/* {" "} */}
+                                        {element.cases}
+                                        {/* {" "} */}
+                                      </Badge>
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
                                   </td>{" "}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div
                                       className="text2"
                                       style={{
-                                        marginRight: 10,
-                                        marginLeft: 10,
-                                        fontSize: "12px",
+                                        marginRight: 5,
+                                        marginLeft: 5,
+                                        fontSize: "11px",
                                       }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       <Badge color="danger">
-                                        {" "}
-                                        {element.deaths}{" "}
-                                      </Badge>{" "}
-                                    </div>{" "}
-                                  </td>{" "}
+                                        {/* {" "} */}
+                                        {element.deaths}
+                                        {/* {" "} */}
+                                      </Badge>
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div
                                       className="text2"
-                                      style={{ fontSize: "12px" }}
+                                      style={{ fontSize: "11px" }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       <Badge color="success">
-                                        {" "}
-                                        {element.recovered}{" "}
-                                      </Badge>{" "}
-                                    </div>{" "}
-                                  </td>{" "}
+                                        {/* {" "} */}
+                                        {element.recovered}
+                                        {/* {" "} */}
+                                      </Badge>
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                 </tr>
                               );
                             })
