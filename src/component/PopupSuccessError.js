@@ -16,6 +16,7 @@ const PopupSuccessError = (props) => {
     handleOnClosePopupSuccessError,
     message,
   } = props;
+  
   switch (modalId) {
     case MODAL_ERROR_BLANK:
       return errorModal(modal, toggle, handleOnClosePopupSuccessError, message);

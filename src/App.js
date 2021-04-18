@@ -14,6 +14,7 @@ import {
 // import logoSubee from "./../src/assets/image/icon.jpg";
 import avatar from "./assets/image/avatar.jpg";
 import { SiGmail } from "react-icons/si";
+import Copyright from "./component/Copyright";
 import {
   Container,
   Row,
@@ -46,7 +47,8 @@ import TabMap from "./../src/component/TabMap";
 import moment from "moment";
 import VnIcon from "./../src/assets/image/vnicon.png";
 import data from "./api.json";
-import "./assets/css/sass/themes/gogo.light.purple.scss";
+// import "./assets/css/sass/themes/gogo.light.purple.scss";
+import "./assets/css/sass/themes/gogo.light.blue.scss";
 // import "./assets/css/sass/_gogo.style.scss";
 
 function App() {
@@ -164,13 +166,13 @@ function App() {
               </Col>
               <Col className="row-2" md={3}>
                 <div
-                  className={"buttonStyleFa"}
+                  className="buttonStyleFa"
                   ref={target}
                   onClick={() => setShow(!show)}
                   style={{ marginRight: 10 }}
                 >
                   {" "}
-                  <FaCode color={"white"} style={{ marginRight: 3 }} />{" "}
+                  <FaCode color="white" style={{ marginRight: 3 }} />{" "}
                   <span style={{ color: "white", fontSize: 10 }}>Nhúng</span>{" "}
                 </div>{" "}
                 <Overlay target={target.current} show={show} placement="bottom">
@@ -474,52 +476,65 @@ function App() {
                             .map((element) => {
                               return (
                                 <tr className="">
-                                  {" "}
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <img
                                       className="flagStyle"
                                       src={element.countryInfo.flag}
                                       alt={element.country}
-                                    />{" "}
-                                  </td>{" "}
+                                    />
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div className="text2">
-                                      {" "}
-                                      {element.country}{" "}
-                                    </div>{" "}
-                                  </td>{" "}
+                                      {/* {" "} */}
+                                      {element.country}
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <span
-                                      className="text2"
-                                      style={{ fontSize: "7px" }}
+                                      className="text2 text-center"
+                                      style={{ fontSize: "10px" }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       {moment(element.updated).fromNow(
                                         true
-                                      )}{" "}
-                                    </span>{" "}
-                                  </td>{" "}
+                                      )}
+                                      {/* {" "} */}
+                                    </span>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div
                                       className="text2"
                                       style={{
                                         marginLeft: 10,
+                                        marginRight: 10,
                                         fontSize: "15px",
                                       }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       <Badge color="warning">
-                                        {" "}
-                                        {element.cases}{" "}
-                                      </Badge>{" "}
-                                    </div>{" "}
-                                  </td>{" "}
+                                        {/* {" "} */}
+                                        {element.cases}
+                                        {/* {" "} */}
+                                      </Badge>
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div
                                       className="text2"
                                       style={{
@@ -528,30 +543,44 @@ function App() {
                                         fontSize: "15px",
                                       }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       <Badge color="danger">
-                                        {" "}
-                                        {element.deaths}{" "}
-                                      </Badge>{" "}
-                                    </div>{" "}
-                                  </td>{" "}
+                                        {/* {" "} */}
+                                        {element.deaths}
+                                        {/* {" "} */}
+                                      </Badge>
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                   <td>
-                                    {" "}
+                                    {/* {" "} */}
                                     <div
                                       className="text2"
-                                      style={{ fontSize: "15px" }}
+                                      style={{ 
+                                        fontSize: "15px",
+                                        marginRight: 10,
+                                        marginLeft: 10 
+                                      }}
                                     >
-                                      {" "}
+                                      {/* {" "} */}
                                       <Badge color="success">
-                                        {" "}
-                                        {element.recovered}{" "}
-                                      </Badge>{" "}
-                                    </div>{" "}
-                                  </td>{" "}
+                                        {/* {" "} */}
+                                        {element.recovered}
+                                        {/* {" "} */}
+                                      </Badge>
+                                      {/* {" "} */}
+                                    </div>
+                                    {/* {" "} */}
+                                  </td>
+                                  {/* {" "} */}
                                 </tr>
                               );
-                            })}{" "}
-                    </tbody>{" "}
+                            })}
+                            {/* {" "} */}
+                    </tbody>
+                    {/* {" "} */}
                   </table>
                 ) : (
                   <span className="text2 text-center">Country Not Found</span>
@@ -786,7 +815,7 @@ function App() {
       openModal={openModal}
       handleCancel={handleCancel}
       />{" "}
-      <Row style={{ marginTop: 10 }}>
+      {/* <Row style={{ marginTop: 10 }}>
         {" "}
         <Col className="row-1" md={12}>
           {" "}
@@ -816,7 +845,8 @@ function App() {
             </footer>{" "}
           </Container>{" "}
         </Col>{" "}
-      </Row>{" "}
+      </Row>{" "} */}
+      <Copyright/>
     </Container>
   );
 }

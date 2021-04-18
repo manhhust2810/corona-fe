@@ -35,6 +35,10 @@ function ModelEmail(props) {
     setEmail(value);
   };
 
+  // useEffect(() => {
+  //   setEmail(value);
+  // }, [value])
+
   const handleSubmit = () => {
     const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     props.handleCancel();
@@ -62,31 +66,6 @@ function ModelEmail(props) {
     setModalId(modalId);
     setModalOpen(!modalOpen);
   };
-
-  // const onSendMail = async () => {
-  //   let Check = await Axios.get(
-  //     `https://coronavirusupdatevn.herokuapp.com/api/public/sendEmail?email=${email}`
-  //   );
-
-  //   var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  //   if (!email) {
-  //     setModalMessage("Email không được để trống.");
-  //     // alert("Email không được để trống.");
-  //   } else if (!regexEmail.test(email)) {
-  //     setModalMessage("Email sai định dạng.");
-  //     // alert("Email sai định dạng.");
-  //   } else {
-  //     if (Check.data.status === 200) {
-  //       // alert("Đăng ký thành công");
-  //       setModalMessage("Đăng ký thành công");
-  //       props.onHide();
-  //     } else {
-  //       setModalMessage("Email này bạn đã đăng ký");
-  //       // alert("Email này bạn đã đăng ký");
-  //     }
-  //   }
-  // };
 
   return (
     <Container>
