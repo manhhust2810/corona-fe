@@ -79,7 +79,7 @@ function ModelEmail(props) {
         id="reset-status-modal"
       >
         <ModalHeader toggle={props.handleCancel} className="modal-header">
-          <h6>Receive notifications every time a situation updates</h6>
+          <h6>Register for news via email</h6>
         </ModalHeader>
         <ModalBody>
           <Container>
