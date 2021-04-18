@@ -79,13 +79,13 @@ function ModelEmail(props) {
         id="reset-status-modal"
       >
         <ModalHeader toggle={props.handleCancel} className="modal-header">
-          <h6>Nhận thông báo mỗi khi cập nhật</h6>
+          <h6>Receive notifications every time a situation updates</h6>
         </ModalHeader>
         <ModalBody>
           <Container>
             <Row>
               <Label for="tye" sm={4}>
-                Nhập email:<span className="text-danger">*</span>
+                Email:<span className="text-danger">*</span>
               </Label>
               <Col sm={8} className="col-dropdown-item">
                 <Input
