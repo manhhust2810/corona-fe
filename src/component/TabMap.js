@@ -22,11 +22,11 @@ function TabMap(props) {
     return (
        <Container fluid={true}>
             <ToggleButtonGroup type="radio" name="options" defaultValue={1} onChange={(e) => setCheck(e) }>
-                <ToggleButton variant={check === 1 ? 'info' : 'dark'} className='textTab' value={1}><FaGlobeAsia/> Biểu đồ lây nhiễm toàn thế giới</ToggleButton>
+                <ToggleButton variant={check === 1 ? 'info' : 'dark'} className='textTab' value={1}><FaGlobeAsia/> Worldwide infection chart</ToggleButton>
                 <ToggleButton variant={check === 2 ? 'info' : 'dark'} className='textTab' value={2}>
                 <img src={VnIcon} width={20} height={15} style={{marginRight : 5}} alt="Vietnam">
 
-                </img> Các tỉnh thành Việt Nam
+                </img> Provinces in Vietnam
                 </ToggleButton>
             </ToggleButtonGroup>
 

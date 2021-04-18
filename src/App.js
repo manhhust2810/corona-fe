@@ -11,7 +11,6 @@ import {
   Overlay,
   // Tooltip,
 } from "react-bootstrap";
-// import logoSubee from "./../src/assets/image/icon.jpg";
 import avatar from "./assets/image/avatar.jpg";
 import { SiGmail } from "react-icons/si";
 import Copyright from "./component/Copyright";
@@ -162,7 +161,7 @@ function App() {
                 </div>
               </Col>{" "}
               <Col className="row-2" md={3}>
-              <strong className="text" style={{color: "yellow"}}>Coronavirus (2021 - nCoV)</strong>
+              <strong className="text" style={{color: "yellow"}}>CORONAVIRUS (2021 - nCoV)</strong>
               </Col>
               <Col className="row-2" md={3}>
                 <div
@@ -173,7 +172,7 @@ function App() {
                 >
                   {" "}
                   <FaCode color="white" style={{ marginRight: 3 }} />{" "}
-                  <span style={{ color: "white", fontSize: 10 }}>Nhúng</span>{" "}
+                  <span style={{ color: "white", fontSize: 10 }}>Embed</span>{" "}
                 </div>{" "}
                 <Overlay target={target.current} show={show} placement="bottom">
                   {" "}
@@ -195,9 +194,11 @@ function App() {
                   {" "}
                   <FaBell color={"white"} style={{ marginRight: 3 }} />{" "}
                   <span style={{ color: "white", fontSize: 10 }}>
-                    {" "}
-                    Nhận thông báo{" "}
-                  </span>{" "}
+                    {/* {" "} */}
+                    Get notifications
+                    {/* {" "} */}
+                  </span>
+                  {/* {" "} */}
                 </div>{" "}
               </Col>{" "}
               <Col className="row-2" md={4}>
@@ -208,17 +209,16 @@ function App() {
                     {" "}
                     <tr className="text2">
                       {" "}
-                      <FaRegCalendarAlt /> Cập nhật lần cuối lúc{" "}
+                      <FaRegCalendarAlt /> Last updated at {" "}
                       {currentUpdate.format("DD/MM/YYYY HH:mm")}{" "}
                     </tr>{" "}
                     <tr className="text2">
                       {" "}
-                      <FaRegCopyright /> Nguồn : WHO, CDC, NHC, DXY & Bộ Y Tế
-                      Việt Nam.{" "}
+                      <FaRegCopyright /> Source : WHO, CDC, NHC, DXY & Ministry of Health.
                     </tr>{" "}
                     <tr className="text2">
                       {" "}
-                      <SiGmail /> Liên hệ :{" "}
+                      <SiGmail /> Contact :{" "}
                       <a href="#" style={{color: "yellow"}}>manhktashust@gmail.com</a>{" "}
                     </tr>{" "}
                   </td>{" "}
@@ -251,8 +251,9 @@ function App() {
                     value={1}
                     // style={{ fontWeight: "bold" }}
                   >
-                    {" "}
-                    <FaGlobeAsia /> Thế giới{" "}
+                    {/* {" "} */}
+                    <FaGlobeAsia /> Worldwide
+                    {/* {" "} */}
                   </ToggleButton>{" "}
                   <ToggleButton
                     variant={check === 2 ? "info" : "dark"}
@@ -268,7 +269,8 @@ function App() {
                       style={{ marginRight: 5 }}
                       alt="flag"
                     ></img>{" "}
-                    Việt Nam{" "}
+                    Vietnam
+                    {/* {" "} */}
                   </ToggleButton>{" "}
                 </ToggleButtonGroup>{" "}
                 <div
@@ -276,7 +278,7 @@ function App() {
                   style={{ marginBottom: 10, fontWeight: "bold" }}
                 >
                   {" "}
-                  <FaGlobeAsia /> Thống kê ca nhiễm theo quốc gia{" "}
+                  <FaGlobeAsia /> Statistics by each country
                 </div>{" "}
                 {check === 1 ? (
                   <center>
@@ -632,7 +634,7 @@ function App() {
                   {" "}
                   <div className="text2" style={{ fontWeight: "bold" }}>
                     {" "}
-                    <FaSyringe /> Tổng ca nhiễm{" "}
+                    <FaSyringe /> Total cases
                   </div>
                   {" "}
                   <div className="text" style={{ fontSize: 15 }}>
@@ -651,7 +653,7 @@ function App() {
                   {" "}
                   <div className="text2" style={{ fontWeight: "bold" }}>
                     {" "}
-                    <FaSkullCrossbones /> Tử vong
+                    <FaSkullCrossbones /> Dealth
                     {" "}
                   </div>{" "}
                   <div className="text" style={{ fontSize: 15 }}>
@@ -670,7 +672,7 @@ function App() {
                   {" "}
                   <div className="text2" style={{ fontWeight: "bold" }}>
                     {" "}
-                    <FaPlusSquare /> Hồi phục
+                    <FaPlusSquare /> Recovered
                     {" "}
                   </div>
                   {" "}
@@ -704,7 +706,8 @@ function App() {
                 style={{ marginLeft: 10, fontWeight: "bold" }}
               >
                 {" "}
-                <FaPencilAlt /> Chú thích biểu đồ{" "}
+                <FaPencilAlt /> Annotation chart
+                {/* {" "} */}
               </div>{" "}
             </Col>{" "}
             <Col
@@ -728,7 +731,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 1000 - 1,000,000
+                From 1000 - 1,000,000
                 {" "}
               </div>{" "}
             </Col>{" "}
@@ -754,7 +757,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 100 - 1000{" "}
+                From 100 - 1000{" "}
               </div>{" "}
             </Col>{" "}
             <Col
@@ -779,7 +782,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 10 - 100{" "}
+                From 10 - 100{" "}
               </div>{" "}
             </Col>{" "}
             <Col
@@ -804,7 +807,7 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 1 - 10{" "}
+                From 1 - 10{" "}
               </div>{" "}
             </Col>{" "}
           </Row>{" "}
