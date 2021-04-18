@@ -29,6 +29,7 @@ function ModelEmail(props) {
   const [modalMessage, setModalMessage] = useState("");
   // const [toggle, setToggle] = useState(true);
   const [modalId, setModalId] = useState("");
+  const [messageClassName, setMessageClassName] = useState("")
 
   const handleType = (event) => {
     const { value } = event.target;
@@ -45,18 +46,21 @@ function ModelEmail(props) {
     if (email === "") {
       setModalOpen(true);
       setModalId("MODAL_ERROR_BLANK");
-      setModalMessage("Email không được để trống.");
+      setModalMessage("*This field is required!");
       setEmail("");
+      setMessageClassName("text text-info");
     } else if (!regexEmail.test(email)) {
-      setModalMessage("Email sai định dạng.");
+      setModalMessage("The entered is incorrect format!");
       setModalId("MODAL_ERROR_INVALID");
       setModalOpen(true);
       setEmail("");
+      setMessageClassName("text text-danger");
     } else {
-      setModalMessage("Đăng ký thành công");
+      setModalMessage("The entered is accepted!");
       setModalId("MODAL_SUCCESS");
       setModalOpen(true);
       setEmail("");
+      setMessageClassName("text text-success")
     }
   };
 
@@ -114,6 +118,7 @@ function ModelEmail(props) {
           toggle={toggle}
           handleOnClosePopupSuccessError={handleOnClosePopupSuccessError}
           message={modalMessage}
+          messageClassName={messageClassName}
         />
       </div>
     </Container>

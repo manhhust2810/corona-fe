@@ -15,19 +15,21 @@ const PopupSuccessError = (props) => {
     toggle,
     handleOnClosePopupSuccessError,
     message,
+    messageClassName
   } = props;
   
   switch (modalId) {
     case MODAL_ERROR_BLANK:
-      return errorModal(modal, toggle, handleOnClosePopupSuccessError, message);
+      return errorModal(modal, toggle, handleOnClosePopupSuccessError, message, messageClassName);
     case MODAL_ERROR_INVALID:
-      return errorModal(modal, toggle, handleOnClosePopupSuccessError, message);
+      return errorModal(modal, toggle, handleOnClosePopupSuccessError, message, messageClassName);
     case MODAL_SUCCESS:
       return successModal(
         modal,
         toggle,
         handleOnClosePopupSuccessError,
-        message
+        message,
+        messageClassName
       );
     default:
       return null;
@@ -41,6 +43,7 @@ const successModal = (
   toggle,
   handleOnClosePopupSuccessError,
   message,
+  messageClassName,
   className = ""
 ) => {
   return (
@@ -57,7 +60,7 @@ const successModal = (
       >
         Success
       </ModalHeader>
-      <ModalBody><IoIosCheckmarkCircle size={24} color="green"/>&nbsp;{message}</ModalBody>
+      <ModalBody className={messageClassName}><IoIosCheckmarkCircle size={24} color="primary"/>&nbsp;<strong>{message}</strong></ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={toggle}>
           Close
@@ -88,7 +91,7 @@ const errorModal = (
       >
         Warning
       </ModalHeader>
-      <ModalBody><MdMoodBad size={24} color="#8C1515"/>&nbsp;{message}</ModalBody>
+      <ModalBody><MdMoodBad size={24} color="info"/>&nbsp;<strong>{message}</strong></ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={toggle}>
           Close

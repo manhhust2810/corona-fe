@@ -42,7 +42,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 import Axios from "axios";
-import ModalEmail from "./../src/component/ModelEmail";
+import ModalEmail from "./component/Modal";
 import TabMap from "./../src/component/TabMap";
 import moment from "moment";
 import VnIcon from "./../src/assets/image/vnicon.png";
@@ -383,7 +383,7 @@ function App() {
                             .map((element) => {
                               return (
                                 <tr key={element.country}>
-                                  {" "}
+                                  {/* {" "} */}
                                   <td>
                                     {" "}
                                     <img
@@ -728,7 +728,8 @@ function App() {
               ></div>{" "}
               <div className="text2" style={{ marginLeft: 10 }}>
                 {" "}
-                Từ 1000 - 1,000,000{" "}
+                Từ 1000 - 1,000,000
+                {" "}
               </div>{" "}
             </Col>{" "}
             <Col
