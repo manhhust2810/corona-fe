@@ -214,7 +214,7 @@ function App() {
                   onClick={() => {
                     setOpenModal(true);
                   }}>
-                  <FaBell color={"white"} style={{ marginRight: 3 }} /> Get notifications
+                  <FaBell color="white" style={{ marginRight: 3 }} /> Get news
                 </Button>
               </Col>{" "}
               <Col className="row-2" md={4}>

@@ -88,7 +88,7 @@ function ModelEmail(props) {
               {/* <Label for="tye" sm={2}>
                 Email:<span className="text-danger">*</span>
               </Label> */}
-              <Col 
+              <Col
               className="col-dropdown-item"
               sm={12}
               >
@@ -111,7 +111,7 @@ function ModelEmail(props) {
                     id="standard-basic" 
                     label="Email"
                     onChange={handleType}
-                    style={{ width: "60%" }}
+                    style={{ width: "80%" }}
                   />
                 </center>
               </Col>
