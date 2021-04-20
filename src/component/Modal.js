@@ -13,15 +13,16 @@ import ModalFooter from "reactstrap/es/ModalFooter";
 import {
   Button,
   Col,
-  Input,
+  // Input,
   Container,
-  Label,
+  // Label,
   Modal,
   ModalBody,
   ModalHeader,
   Row,
   // Spinner,
 } from "reactstrap";
+import TextField from '@material-ui/core/TextField';
 
 function ModelEmail(props) {
   const [email, setEmail] = useState("");
@@ -77,6 +78,7 @@ function ModelEmail(props) {
         isOpen={props.openModal}
         toggle={props.handleCancel}
         id="reset-status-modal"
+        style={{ width: 400}}
       >
         <ModalHeader toggle={props.handleCancel} className="modal-header">
           <h6>Register for news via email</h6>
@@ -84,16 +86,35 @@ function ModelEmail(props) {
         <ModalBody>
           <Container>
             <Row>
-              <Label for="tye" sm={4}>
+              {/* <Label for="tye" sm={2}>
                 Email:<span className="text-danger">*</span>
-              </Label>
-              <Col sm={8} className="col-dropdown-item">
-                <Input
+              </Label> */}
+              <Col 
+              className="col-dropdown-item"
+              // sm={12}
+              >
+                {/* <Input
                   type="email"
                   required
                   placeholder="Enter email ..."
                   onChange={handleType}
-                />
+                /> */}
+                <center>
+                {/* <TextField 
+                  id="outlined-search" 
+                  label="Email" 
+                  type="search" 
+                  variant="outlined"
+                /> */}
+                  <TextField 
+                    required
+                    type="email"
+                    id="standard-basic" 
+                    label="Email"
+                    onChange={handleType}
+                    style={{ width: "75%" }}
+                  />
+                </center>
               </Col>
             </Row>
           </Container>

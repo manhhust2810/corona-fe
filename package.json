@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.4",
+    "formik": "^2.1.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
@@ -27,7 +29,8 @@
     "react-simple-maps": "^1.0.0-beta.0",
     "reactstrap": "^8.9.0",
     "sass": "^1.32.8",
-    "styled-components": "^5.2.3"
+    "styled-components": "^5.2.3",
+    "yup": "^0.28.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -49,6 +49,7 @@ import data from "./api.json";
 // import "./assets/css/sass/themes/gogo.light.purple.scss";
 import "./assets/css/sass/themes/gogo.light.blue.scss";
 // import "./assets/css/sass/_gogo.style.scss";
+import Button from '@material-ui/core/Button';
 
 function App() {
   const [total, setTotal] = useState({});
@@ -164,16 +165,18 @@ function App() {
               <strong className="text" style={{color: "yellow"}}>CORONAVIRUS (2021 - nCoV)</strong>
               </Col>
               <Col className="row-2" md={3}>
-                <div
+                {/* <div
                   className="buttonStyleFa"
                   ref={target}
                   onClick={() => setShow(!show)}
                   style={{ marginRight: 10 }}
                 >
-                  {" "}
                   <FaCode color="white" style={{ marginRight: 3 }} />{" "}
                   <span style={{ color: "white", fontSize: 10 }}>Embed</span>{" "}
-                </div>{" "}
+                </div> */}
+                <Button variant="contained" color="primary" size="small">
+                  <FaCode color="white" style={{ marginRight: 3 }} />Embed
+                </Button>
                 <Overlay target={target.current} show={show} placement="bottom">
                   {" "}
                   {(props) => (
@@ -185,7 +188,7 @@ function App() {
                     </Tooltip>
                   )}{" "}
                 </Overlay>{" "}
-                <div
+                {/* <div
                   onClick={() => {
                     setOpenModal(true);
                   }}
@@ -194,12 +197,19 @@ function App() {
                   {" "}
                   <FaBell color={"white"} style={{ marginRight: 3 }} />{" "}
                   <span style={{ color: "white", fontSize: 10 }}>
-                    {/* {" "} */}
                     Get notifications
-                    {/* {" "} */}
                   </span>
-                  {/* {" "} */}
-                </div>{" "}
+                </div> */}
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  size="small" 
+                  onClick={() => {
+                    setOpenModal(true);
+                  }}>
+                  <FaBell color={"white"} style={{ marginRight: 3 }} /> Get notifications
+                </Button>
               </Col>{" "}
               <Col className="row-2" md={4}>
                 {" "}
