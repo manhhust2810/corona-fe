@@ -174,7 +174,12 @@ function App() {
                   <FaCode color="white" style={{ marginRight: 3 }} />{" "}
                   <span style={{ color: "white", fontSize: 10 }}>Embed</span>{" "}
                 </div> */}
-                <Button variant="contained" color="primary" size="small">
+                <Button 
+                  variant="contained" 
+                  color="primary"
+                  className="buttonStyleFa"
+                  size="small"
+                  >
                   <FaCode color="white" style={{ marginRight: 3 }} />Embed
                 </Button>
                 <Overlay target={target.current} show={show} placement="bottom">
@@ -204,7 +209,8 @@ function App() {
                 <Button 
                   variant="contained" 
                   color="secondary" 
-                  size="small" 
+                  size="small"
+                  className="buttonStyle"
                   onClick={() => {
                     setOpenModal(true);
                   }}>

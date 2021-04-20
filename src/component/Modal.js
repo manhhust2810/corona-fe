@@ -78,7 +78,6 @@ function ModelEmail(props) {
         isOpen={props.openModal}
         toggle={props.handleCancel}
         id="reset-status-modal"
-        style={{ width: 400}}
       >
         <ModalHeader toggle={props.handleCancel} className="modal-header">
           <h6>Register for news via email</h6>
@@ -91,7 +90,7 @@ function ModelEmail(props) {
               </Label> */}
               <Col 
               className="col-dropdown-item"
-              // sm={12}
+              sm={12}
               >
                 {/* <Input
                   type="email"
@@ -112,7 +111,7 @@ function ModelEmail(props) {
                     id="standard-basic" 
                     label="Email"
                     onChange={handleType}
-                    style={{ width: "75%" }}
+                    style={{ width: "60%" }}
                   />
                 </center>
               </Col>

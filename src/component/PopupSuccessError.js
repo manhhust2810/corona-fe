@@ -53,7 +53,6 @@ const successModal = (
       onExit={handleOnClosePopupSuccessError}
       id="success-modal"
       className={className}
-      style={{ width: 400}}
     >
       <ModalHeader
         toggle={toggle}
@@ -85,7 +84,6 @@ const errorModal = (
       onExit={handleOnClosePopupSuccessError}
       id="error-modal"
       className={className}
-      style={{ width: 400}}
     >
       <ModalHeader
         toggle={toggle}
