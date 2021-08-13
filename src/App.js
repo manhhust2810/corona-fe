@@ -14,6 +14,7 @@ import {
 import avatar from "./assets/image/avatar.jpg";
 import { SiGmail } from "react-icons/si";
 import Copyright from "./component/Copyright";
+import Overview from "./component/Overview";
 import {
   Container,
   Row,
@@ -50,6 +51,7 @@ import data from "./api.json";
 import "./assets/css/sass/themes/gogo.light.blue.scss";
 // import "./assets/css/sass/_gogo.style.scss";
 import Button from '@material-ui/core/Button';
+// import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 function App() {
   const [total, setTotal] = useState({});
@@ -162,7 +164,9 @@ function App() {
                 </div>
               </Col>{" "}
               <Col className="row-2" md={3}>
-              <strong className="text" style={{color: "yellow"}}>CORONAVIRUS (2021 - nCoV)</strong>
+              <strong className="text" style={{color: "yellow"}} size="80">
+              NEWS ON THE EVIDENCE OF THE RESPIRATORY DISEASE COVID - 19
+              </strong>
               </Col>
               <Col className="row-2" md={3}>
                 {/* <div
@@ -179,7 +183,7 @@ function App() {
                   color="primary"
                   className="buttonStyleFa"
                   size="small"
-                  >
+                >
                   <FaCode color="white" style={{ marginRight: 3 }} />Embed
                 </Button>
                 <Overlay target={target.current} show={show} placement="bottom">
@@ -208,7 +212,7 @@ function App() {
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Button 
                   variant="contained" 
-                  color="secondary" 
+                  color="secondary"
                   size="small"
                   className="buttonStyle"
                   onClick={() => {
@@ -262,7 +266,7 @@ function App() {
                 >
                   {" "}
                   <ToggleButton
-                    variant={check === 1 ? "info" : "dark"}
+                    variant={check === 1 ? "info" : ""}
                     className="textTab"
                     value={1}
                     // style={{ fontWeight: "bold" }}
@@ -272,7 +276,7 @@ function App() {
                     {/* {" "} */}
                   </ToggleButton>{" "}
                   <ToggleButton
-                    variant={check === 2 ? "info" : "dark"}
+                    variant={check === 2 ? "info" : ""}
                     className="textTab"
                     value={2}
                     // style={{ fontWeight: "bold" }}
@@ -351,41 +355,43 @@ function App() {
                       {" "}
                       <tr>
                         {" "}
-                        <th className="text2" style={{ fontSize: "10px" }}>
+                        <th 
+                        className="text2" 
+                        style={{ fontSize: "10px", borderColor: "#28A745" }}>
                           {" "}
                           <b>Flag</b>{" "}
                         </th>{" "}
                         <th
                           className="text2 text-center"
-                          style={{ fontSize: "10px" }}
+                          style={{ fontSize: "10px", borderColor: "#28A745" }}
                         >
                           {" "}
                           <b>Nation</b>{" "}
                         </th>{" "}
                         <th
                           className="text2 text-center"
-                          style={{ fontSize: "10px" }}
+                          style={{ fontSize: "10px", borderColor: "#28A745" }}
                         >
                           {" "}
                           <b>Update</b>{" "}
                         </th>{" "}
                         <th
                           className="text2 text-center"
-                          style={{ fontSize: "10px" }}
+                          style={{ fontSize: "10px", borderColor: "#28A745" }}
                         >
                           {" "}
                           <b>Cases</b>{" "}
                         </th>{" "}
                         <th
                           className="text2 text-center"
-                          style={{ fontSize: "10px" }}
+                          style={{ fontSize: "10px", borderColor: "#28A745" }}
                         >
                           {" "}
                           <b>Death</b>{" "}
                         </th>{" "}
                         <th
                           className="text2 text-center"
-                          style={{ fontSize: "10px" }}
+                          style={{ fontSize: "10px", borderColor: "#28A745" }}
                         >
                           {" "}
                           <b>Recovered</b>{" "}
@@ -493,6 +499,7 @@ function App() {
                             .filter((item) => item.country === "Vietnam")
                             .map((element) => {
                               return (
+                                
                                 <tr className="">
                                   {/* {" "} */}
                                   <td>
@@ -579,7 +586,7 @@ function App() {
                                       style={{ 
                                         fontSize: "15px",
                                         marginRight: 10,
-                                        marginLeft: 10 
+                                        marginLeft: 10
                                       }}
                                     >
                                       {/* {" "} */}
@@ -593,7 +600,7 @@ function App() {
                                     {/* {" "} */}
                                   </td>
                                   {/* {" "} */}
-                                </tr>
+                                </tr>                  
                               );
                             })}
                             {/* {" "} */}
@@ -606,6 +613,18 @@ function App() {
               </td>{" "}
             </tr>{" "}
           </table>
+          <div>
+            {check !== 1 ? 
+            <span>
+            <span
+              className="text2"
+              style={{ marginBottom: 10, fontWeight: "bold" }}
+            >
+              Overview
+            </span>
+              <Overview />
+            </span>:<></>}
+          </div>
           
         {" "}
           <Container fluid={true}>

@@ -4,7 +4,8 @@
 
 /* Các CSS này dành cho toàn bộ website và desktop */
 body {
-    background-color: black;
+    background-color:#144633;
+    /* background-color:#00502F; */
     padding: 10px;
 }
 
@@ -45,19 +46,19 @@ body {
 }
 
 .row-1-col-2 {
-    background-color: #212121;
+    /* background-color: #212121; */
     height: 536px;
     max-height: 536px;
-    border: 1px solid gray;
+    border: 1px solid #28A745;
     border-radius: 1px;
     padding: 10px;
     overflow-y: auto;
 }
 
 .row-1 {
-    background-color: #212121;
+    /* background-color: #212121; */
     /* max-height: 10px; */
-    border: 1px solid gray;
+    border: 1px solid #28A745;
     border-radius: 1px;
     display: flex;
     justify-content: flex-start;

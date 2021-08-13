@@ -12,7 +12,7 @@ import {
 import Mapss from './Map';
 import MapVN from './MapVN';
 import VnIcon from './../assets/image/vnicon.png';
-import {FaGlobeAsia} from 'react-icons/fa';
+import { FaGlobeAsia } from 'react-icons/fa';
 
 function TabMap(props) {
     // const [key, setKey] = useState([1]);
@@ -22,11 +22,12 @@ function TabMap(props) {
     return (
        <Container fluid={true}>
             <ToggleButtonGroup type="radio" name="options" defaultValue={1} onChange={(e) => setCheck(e) }>
-                <ToggleButton variant={check === 1 ? 'info' : 'dark'} className='textTab' value={1}><FaGlobeAsia/> Worldwide infection chart</ToggleButton>
-                <ToggleButton variant={check === 2 ? 'info' : 'dark'} className='textTab' value={2}>
-                <img src={VnIcon} width={20} height={15} style={{marginRight : 5}} alt="Vietnam">
-
-                </img> Provinces in Vietnam
+                <ToggleButton variant={check === 1 ? 'info' : ''} className='textTab' value={1}>
+                <FaGlobeAsia/> Worldwide infection chart
+                </ToggleButton>
+                <ToggleButton variant={check === 2 ? 'info' : ''} className='textTab' value={2}>
+                <img src={VnIcon} width={20} height={15} style={{marginRight : 5}} alt="Vietnam"/>
+                Provinces in Vietnam
                 </ToggleButton>
             </ToggleButtonGroup>
 
