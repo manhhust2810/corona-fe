@@ -51,6 +51,7 @@ import data from "./api.json";
 import "./assets/css/sass/themes/gogo.light.blue.scss";
 // import "./assets/css/sass/_gogo.style.scss";
 import Button from '@material-ui/core/Button';
+// import Draft from "./component/Draft";
 // import { createTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 
 function App() {
@@ -498,18 +499,15 @@ function App() {
                         : originData
                             .filter((item) => item.country === "Vietnam")
                             .map((element) => {
-                              return (
-                                
+                              return ( 
                                 <tr className="">
-                                  {/* {" "} */}
                                   <td>
-                                    {/* {" "} */}
                                     <img
                                       className="flagStyle"
                                       src={element.countryInfo.flag}
                                       alt={element.country}
                                     />
-                                    {/* {" "} */}
+        
                                   </td>
                                   {/* {" "} */}
                                   <td>
@@ -526,7 +524,7 @@ function App() {
                                     {/* {" "} */}
                                     <span
                                       className="text2 text-center"
-                                      style={{ fontSize: "10px" }}
+                                      style={{ fontSize: "7px" }}
                                     >
                                       {/* {" "} */}
                                       {moment(element.updated).fromNow(
@@ -542,9 +540,12 @@ function App() {
                                     <div
                                       className="text2"
                                       style={{
-                                        marginLeft: 10,
-                                        marginRight: 10,
-                                        fontSize: "15px",
+                          
+                                        marginLeft: 5,
+                                        fontSize: "11px",
+                                        // marginLeft: 10,
+                                        marginRight: 5,
+                                        // fontSize: "15px",
                                       }}
                                     >
                                       {/* {" "} */}
@@ -563,9 +564,9 @@ function App() {
                                     <div
                                       className="text2"
                                       style={{
-                                        marginRight: 10,
-                                        marginLeft: 10,
-                                        fontSize: "15px",
+                                        marginRight: 5,
+                                        marginLeft: 5,
+                                        fontSize: "11px",
                                       }}
                                     >
                                       {/* {" "} */}
@@ -584,9 +585,10 @@ function App() {
                                     <div
                                       className="text2"
                                       style={{ 
-                                        fontSize: "15px",
-                                        marginRight: 10,
-                                        marginLeft: 10
+                                        // fontSize: "15px",
+                                        // marginRight: 5,
+                                        marginLeft: 7.5,
+                                        fontSize: "11px"
                                       }}
                                     >
                                       {/* {" "} */}
@@ -623,6 +625,7 @@ function App() {
               Overview
             </span>
               <Overview />
+              {/* <Draft /> */}
             </span>:<></>}
           </div>
           

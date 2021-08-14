@@ -166,6 +166,23 @@ body {
     overflow-y: auto;
 } */
 
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+}
+
+.tooltip-total, .tooltip-death .tooltip-recover {
+    font-weight: bold;
+}
+
 thead > tr > th {
     border: 1px solid white;  
     border-collapse: collapse; 
