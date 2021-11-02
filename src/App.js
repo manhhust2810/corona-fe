@@ -165,9 +165,10 @@ function App() {
                 </div>
               </Col>{" "}
               <Col className="row-2" md={3}>
-              <strong className="text" style={{color: "yellow"}} size="80">
-              NEWS ON THE EVIDENCE OF THE RESPIRATORY DISEASE COVID - 19
+                <strong className="text" style={{color: "yellow"}} size="80">
+              VIETNAM CORONAVIRUS TRACKER
               </strong>
+              
               </Col>
               <Col className="row-2" md={3}>
                 {/* <div
